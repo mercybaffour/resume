@@ -19,6 +19,22 @@ body {
     background-color:#E0E0EA;
 }
 
+/* Main Page */
+
+.site-title {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.resume-link {
+    margin-top: 5%;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Resume Page */
+
 .left-section{
     grid-column: span 2;
     height: 100%;
