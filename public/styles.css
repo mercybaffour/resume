@@ -15,23 +15,6 @@
     grid-template-columns: repeat(7, 1fr);
 }
 
-body {
-    background-color:#E0E0EA;
-}
-
-/* Main Page */
-
-.site-title {
-    margin-top: 10%;
-    text-align: center;
-}
-
-.resume-link {
-    margin-top: 5%;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-}
 
 /* Resume Page */
 
