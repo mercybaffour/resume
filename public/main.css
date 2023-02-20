@@ -1,78 +1,253 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    line-height: 1.5em;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
-background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
-background-repeat: no-repeat;
-  font-family: "Montserrat", sans-serif;
-height: 100vh;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7f7f7;
+}
+
+/* Navbar */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+}
+
+header .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo img {
+    height: 150px;
+    display: block;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
+    transition: left 0.3s;
+}
+
+.navbar.show {
+    left: 0 !important;
+}
+
+.navbar ul {
+    all: unset;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar ul a {
+    all: unset;
+    color:black;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navbar ul a:hover {
+    text-decoration: underline;
+    text-decoration-color: #84357c;
+	text-decoration-thickness: 4px;
+}
+
+.close-nav {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.close-nav button {
+    all: unset;
+    background:#f7f7f7;
+    font-size: 42px;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.close-nav button:hover {
+    background:white;
+}
+
+.menu-bar button {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background:#f7f7f7;
+    height: 50px;
+    width: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.menu-bar i {
+    display: block;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+.menu-bar i::after {
+    display: block;
+    content: "";
+    border-top: 3px solid#444444;
+    margin: 6px 0;
+}
+
+.menu-bar button:hover {
+    background:white;
+}
+
+.menu-bar button:hover i {
+    border-color:#222222;
 }
 
 .container {
-	margin-top: 20%;
-	height: 200px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Hero */
+.hero-stack {
+	padding: 80px 30px;
+}
+
+.heading {
+	text-align: center;
+	font-size: 38px;
+}
+
+.period-punct {
+	color: #84357c;
+}
+
+.socials {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 }
 
-.logo {
-	margin-bottom: 4%;
+.button-social {
+	background-color: black;
+	color: white;
+	padding: 12px 25px;
+	text-decoration: none;
+	margin: 10px;
+}
+
+.button-social:hover {
+	background-color: #bebabe;
+	font-weight: bold;
+	color: black;
+    box-shadow: 0 15px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Slider Carousel */
+.slider-wrapper {
+	margin: 1rem;
+	position: relative;
+	overflow: hidden;
+  }
+
+.slides-container {
+	height: calc(100vh - 50rem);
+	width: 100%;
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+	scroll-behavior: smooth;
+	scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  }
+
+  /* WebKit */
+.slides-container::-webkit-scrollbar { 
+    width: 0;
+    height: 0;
+}
+
+.slide {
+	width: 100%;
+	height: 100%;
+	flex: 1 0 100%;
 	text-align: center;
-	font-family: 'Marck Script', cursive;
-	font-size: 80px;
-	color: #fff;
-	text-align: center;
-	-webkit-animation: glow 1s ease-in-out infinite alternate;
-	-moz-animation: glow 1s ease-in-out infinite alternate;
-	animation: glow 1s ease-in-out infinite alternate;
+	font-weight: bold;
+  }
+
+.slide-arrow {
+	position: absolute;
+	display: flex;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	height: 4rem;
+	color: #84357c;
+	background-color: white;
+	border: none;
+	width: 2rem;
+	font-size: 3rem;
+	padding: 0;
+	cursor: pointer;
+	opacity: 0.5;
+	transition: opacity 100ms;
 }
 
-@keyframes glow {
-	from {
-	  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #3d373a, 0 0 40px #3d373a, 0 0 50px #3d373a, 0 0 60px ##3d373a, 0 0 70px #3d373a;
-	}
-	to {
-	  text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #3d373a, 0 0 50px #3d373a, 0 0 60px #3d373a, 0 0 70px #3d373a, 0 0 80px #3d373a;
-	}
+.slide-arrow:hover,
+.slide-arrow:focus {
+	opacity: 1;
 }
 
-.navMenu {
- display: flex;
- justify-content: center;
- margin-bottom: 4%;
+#slide-arrow-prev {
+	left: 0;
+	padding-left: 0.25rem;
+	border-radius: 0 2rem 2rem 0;
 }
 
-.navMenu a {
-  color: #f6f4e6;
-  text-decoration: none;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  display: inline-block;
-  width: 80px;
-  margin: 10px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+#slide-arrow-next {
+	right: 0;
+	padding-left: 0.75rem;
+	border-radius: 2rem 0 0 2rem;
 }
 
-.navMenu a:hover {
-  color: #f5afec;
-}
-
+/* Visits */
 .visit-container {
+	margin-top: 5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .number-visits {
-	color: #f6f4e6;
 	text-align: center;
 	margin-top: 10px;
 }
@@ -83,8 +258,29 @@ height: 100vh;
 	height: 50px;
 	border: 2px dashed #f5afec;
 	border-radius: 5%;
-	color: white;
 	font-weight: 600;
 	padding-top: 10px;
 	text-align: center;
+}
+
+
+@media (min-width: 550px) {
+    .navbar {
+        all: unset;
+        display: block;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .navbar ul a {
+        font-size: inherit;
+    }
+
+    .close-nav,
+    .menu-bar {
+        display: none;
+    }
 }

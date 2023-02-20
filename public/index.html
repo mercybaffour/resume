@@ -8,17 +8,68 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="logo">welcome to my resume</h1>
-        <nav class="navMenu">
-            <a href="resume.html">Resume</a> 
-            <a href="https://github.com/mercybaffour/resume">Github</a>
-        </nav>
-        <div class="visit-container">
-            <h4 class="number-visits">Number of Visits:</h4>
-            <div id="visits"></div>
-        </div>      
-    </div>
+    <!-- Navbar  -->
+    
+    <header>
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#"><img src="logo.png" alt="mercybaffour.com"></a>
+            </div>
+            <div class="navbar">
+                <div class="close-nav"><button>×</button></div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="resume.html">Resume</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="menu-bar">
+                <button><i></i></button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Hero -->
+    <section class="hero-stack">
+        <div class="container">
+            <div class="hero-wrapper-two">
+                <h1 class="heading">Hi, <br>I&#x27;m Mercy Baffour <span class="period-punct">.</span></h1>
+                <div class="socials">
+                    <a href="https://wwww.linkedin.com/in/mercybaffour" target="_blank" class="button-social">LINKEDIN</a>
+                    <a href="https://wwww.github.com/mercybaffour" target="_blank" class="button-social">GITHUB</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider -->
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+            &#8249;
+        </button>
+        
+        <button class="slide-arrow" id="slide-arrow-next">
+            &#8250;
+        </button>
+        
+        <ul class="slides-container" id="slides-container">
+            <li class="slide"><p>I'm an aspiring software engineer.</p></li>
+            <li class="slide"><p>I have a broad range of technical IT skills.</p></li>
+            <li class="slide"><p>My knowledge spans across hardware, software, networking, and security.</p></li>
+            <li class="slide"><p>I'm a versatile problem solver who can adapt to different environments and situations.</p></li>
+            <li class="slide"><p>As an IT professional, I'm committed to continuously expanding my knowledge and skills to remain a valuable asset to any organization.</p></li>
+        </ul>
+    </section> 
+
+    
+    <!-- Visits History -->
+    <div class="visit-container">
+        <h4 class="number-visits">Number of Visits:</h4>
+        <div id="visits"></div>
+    </div>      
+    
     
     <script src="script.js"></script>
 </body>
