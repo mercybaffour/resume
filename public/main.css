@@ -173,12 +173,12 @@ header .logo img {
 /* Slider Carousel */
 .slider-wrapper {
 	margin: 1rem;
+	height: 10vh;
 	position: relative;
-	overflow: hidden;
+	overflow: auto;
   }
 
 .slides-container {
-	height: calc(100vh - 50rem);
 	width: 100%;
 	display: flex;
 	list-style: none;
@@ -187,7 +187,7 @@ header .logo img {
 	overflow: scroll;
 	scroll-behavior: smooth;
 	scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
   }
 
   /* WebKit */
@@ -202,6 +202,8 @@ header .logo img {
 	flex: 1 0 100%;
 	text-align: center;
 	font-weight: bold;
+	font-size: 0.8rem;
+	word-wrap: normal;
   }
 
 .slide-arrow {
@@ -263,6 +265,11 @@ header .logo img {
 	text-align: center;
 }
 
+@media (min-width: 380px) {
+	.slide {
+		font-size: 0.8rem
+	}
+}
 
 @media (min-width: 550px) {
     .navbar {
@@ -283,4 +290,8 @@ header .logo img {
     .menu-bar {
         display: none;
     }
+
+	.slide {
+		font-size: 1rem
+	}
 }
